@@ -1,0 +1,35 @@
+{
+  "version": "1.2.0",
+  "lastUpdate": "2024-01-23",
+  "description": "Profile enhancements update",
+  "features": [
+    "User authentication with Firebase",
+    "Admin dashboard",
+    "Product management",
+    "Library system",
+    "Public chat interface with OpenAI",
+    "Public profile page with account creation prompts",
+    "Role-based access control",
+    "Enhanced profile management with separate Account and Personal Info pages",
+    "Calendar integration with event management",
+    "Todo list with drag-and-drop functionality",
+    "Care recipient information management",
+    "Community groups and expert chat",
+    "Combined Guide and AI Assistant interface"
+  ],
+  "changes": [
+    "Split profile page into Account Info and Personal Info sections",
+    "Added Calendar component with event management",
+    "Added Todo list with drag-and-drop functionality",
+    "Enhanced UI with consistent styling and improved navigation",
+    "Added care recipient information section",
+    "Added community groups and expert chat features",
+    "Combined Home and AI Guide into single Guide page",
+    "Improved TypeScript support across components",
+    "Migrated from react-beautiful-dnd to @dnd-kit for better drag-and-drop support"
+  ],
+  "dependencies": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}

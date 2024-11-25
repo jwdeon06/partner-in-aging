@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-neutral-50 to-neutral-100 text-neutral-900 font-sans min-h-screen;
+    font-family: 'Montserrat', sans-serif;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.8) 0%, transparent 75%),
+      radial-gradient(circle at 100% 0%, rgba(46, 144, 255, 0.15) 0%, transparent 70%),
+      radial-gradient(circle at 0% 100%, rgba(75, 200, 152, 0.1) 0%, transparent 60%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold tracking-tight text-neutral-900;
+  }
+}
+
+@layer components {
+  .brand-button {
+    @apply px-4 py-2 bg-primary-500 text-white font-medium rounded-lg 
+           hover:bg-primary-600 transition-colors duration-200
+           disabled:opacity-50 disabled:cursor-not-allowed
+           focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
+           shadow-sm hover:shadow-md;
+  }
+
+  .brand-button-outline {
+    @apply px-4 py-2 border-2 border-primary-500 text-primary-500 font-medium 
+           rounded-lg hover:bg-primary-50 transition-colors duration-200
+           disabled:opacity-50 disabled:cursor-not-allowed
+           focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
+           shadow-sm hover:shadow-md;
+  }
+
+  .brand-input {
+    @apply w-full rounded-lg border border-neutral-300 px-4 py-2
+           focus:border-primary-500 focus:ring-1 focus:ring-primary-500
+           disabled:bg-neutral-50 disabled:text-neutral-500
+           bg-white shadow-sm;
+  }
+
+  .brand-link {
+    @apply text-primary-500 hover:text-primary-600 font-medium 
+         underline-offset-2 hover:underline;
+  }
+
+  .nav-link {
+    @apply text-neutral-800 hover:text-primary-600 font-medium transition-colors;
+  }
+
+  .nav-link-active {
+    @apply text-primary-600 font-semibold;
+  }
+
+  .content-card {
+    @apply bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200
+           border border-neutral-200/50 backdrop-blur-sm
+           bg-gradient-to-b from-white to-neutral-50/95;
+  }
+}
+
+/* React Big Calendar Customization */
+.rbc-calendar {
+  @apply font-sans;
+}
+
+.rbc-header {
+  @apply py-2 font-semibold text-gray-700 bg-gray-50;
+}
+
+.rbc-event {
+  @apply bg-primary-500 border-primary-600;
+}
+
+.rbc-today {
+  @apply bg-primary-50;
+}
+
+.rbc-toolbar button {
+  @apply px-3 py-1 rounded-md border border-gray-300 bg-white text-gray-700
+         hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+}
+
+.rbc-toolbar button.rbc-active {
+  @apply bg-primary-500 text-white border-primary-500 hover:bg-primary-600;
+}
